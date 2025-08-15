@@ -39,7 +39,6 @@ function showMovies(movies) {
   movies.forEach((movie) => {
     const { title, poster_path, vote_average, overview } = movie;
     const colorVote = choosen(vote_average);
-    console.log(choosen);
 
     const movieEl = document.createElement("div");
     movieEl.classList.add("movie");
@@ -47,7 +46,7 @@ function showMovies(movies) {
             <img src="${IMG_PATH + poster_path}" alt="${title}">
             <div class="movie-info">
           <h3>${title}</h3>
-          <span class=${colorVote}>${vote_average}</span>
+          <span class=${colorVote}>${vote_average.toFixed(1)}</span>
             </div>
             <div class="overview">
           <h3>Overview</h3>
